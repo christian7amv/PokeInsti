@@ -1,0 +1,177 @@
+
+{
+  "pokemon": [
+    {
+      "id": 25,
+      "nombre": "Pikachu",
+      "tipo": "Eléctrico",
+      "imagen": "pokemon_pikachu"
+    },
+    {
+      "id": 1,
+      "nombre": "Bulbasaur",
+      "tipo": "Planta",
+      "imagen": "pokemon_bulbasaur"
+    },
+    {
+      "id": 4,
+      "nombre": "Charmander",
+      "tipo": "Fuego",
+      "imagen": "pokemon_charmander"
+    },
+    {
+      "id": 7,
+      "nombre": "Squirtle",
+      "tipo": "Agua",
+      "imagen": "pokemon_squirtle"
+    },
+    {
+      "id": 10,
+      "nombre": "Caterpie",
+      "tipo": "Bicho",
+      "imagen": "pokemon_caterpie"
+    },
+    {
+      "id": 16,
+      "nombre": "Pidgey",
+      "tipo": "Normal y Volador",
+      "imagen": "pokemon_pidgey"
+    },
+    {
+      "id": 19,
+      "nombre": "Rattata",
+      "tipo": "Normal",
+      "imagen": "pokemon_rattata"
+    },
+    {
+      "id": 39,
+      "nombre": "Jigglypuff",
+      "tipo": "Normal y Hada",
+      "imagen": "pokemon_jigglypuff"
+    },
+    {
+      "id": 54,
+      "nombre": "Psyduck",
+      "tipo": "Agua",
+      "imagen": "pokemon_psyduck"
+    },
+    {
+      "id": 133,
+      "nombre": "Eevee",
+      "tipo": "Normal",
+      "imagen": "pokemon_eevee"
+    }
+  ],
+  "etiquetas": [
+    {
+      "id": 1,
+      "codigo_nfc": "pokeinsti:etiqueta:01",
+      "pokemon_id": 25,
+      "zona": "Biblioteca",
+      "planta": 0,
+      "x": 0.2,
+      "y": 0.22,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 2,
+      "codigo_nfc": "pokeinsti:etiqueta:02",
+      "pokemon_id": 1,
+      "zona": "Entrada",
+      "planta": 0,
+      "x": 0.5,
+      "y": 0.24,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 3,
+      "codigo_nfc": "pokeinsti:etiqueta:03",
+      "pokemon_id": 4,
+      "zona": "Patio",
+      "planta": 0,
+      "x": 0.8,
+      "y": 0.22,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 4,
+      "codigo_nfc": "pokeinsti:etiqueta:04",
+      "pokemon_id": 7,
+      "zona": "Pasillo norte",
+      "planta": 0,
+      "x": 0.3,
+      "y": 0.72,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 5,
+      "codigo_nfc": "pokeinsti:etiqueta:05",
+      "pokemon_id": 10,
+      "zona": "Zona de estudio",
+      "planta": 0,
+      "x": 0.72,
+      "y": 0.7,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 6,
+      "codigo_nfc": "pokeinsti:etiqueta:06",
+      "pokemon_id": 16,
+      "zona": "Aula 1",
+      "planta": 1,
+      "x": 0.2,
+      "y": 0.22,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 7,
+      "codigo_nfc": "pokeinsti:etiqueta:07",
+      "pokemon_id": 19,
+      "zona": "Aula 2",
+      "planta": 1,
+      "x": 0.5,
+      "y": 0.24,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 8,
+      "codigo_nfc": "pokeinsti:etiqueta:08",
+      "pokemon_id": 39,
+      "zona": "Pasillo superior",
+      "planta": 1,
+      "x": 0.8,
+      "y": 0.22,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 9,
+      "codigo_nfc": "pokeinsti:etiqueta:09",
+      "pokemon_id": 54,
+      "zona": "Sala de informática",
+      "planta": 1,
+      "x": 0.3,
+      "y": 0.72,
+      "latitud": null,
+      "longitud": null
+    },
+    {
+      "id": 10,
+      "codigo_nfc": "pokeinsti:etiqueta:10",
+      "pokemon_id": 133,
+      "zona": "Sala de lectura",
+      "planta": 1,
+      "x": 0.72,
+      "y": 0.7,
+      "latitud": null,
+      "longitud": null
+    }
+  ]
+}

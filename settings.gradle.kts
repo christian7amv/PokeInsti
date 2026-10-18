@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PokeInsti"
 include(":app")
+include(":app:assets")
