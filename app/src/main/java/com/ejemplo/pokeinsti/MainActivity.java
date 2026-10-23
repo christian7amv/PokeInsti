@@ -205,6 +205,12 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
     }
 
+    @Override protected void onDestroy() {
+        baseDatos.close();
+        super.onDestroy();
+    }
+}
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
