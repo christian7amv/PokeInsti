@@ -8,7 +8,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 public class MainActivity extends AppCompatActivity {
+
+    private TextView estado, coleccion, aviso;
+    private EditText nombre, campoRadio;
+    private Button registrar;
+    private BaseDatos baseDatos;
+    private LectorNfc nfc;
+    private Localizador localizador;
+    private Location posicion;
+    private int radio = 15;
+    private String nombrePendiente = "";
+    private String etiquetaCaliente = "";
+    private final Handler reloj = new Handler(Looper.getMainLooper());
+    private final Runnable actualizar = new Runnable() {
+        @Override public void run() {
+            actualizarPista();
+            reloj.postDelayed(this, 3000);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
