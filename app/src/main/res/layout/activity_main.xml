@@ -1,19 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical"
+        android:padding="24dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="28sp" />
+        <TextView
+            android:id="@+id/estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="24dp"
+            android:text="@string/esperando"
+            android:textSize="24sp" />
+        <Button
+            android:id="@+id/activarUbicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/activar_ubicacion" />
+        <EditText
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/radio"
+            android:inputType="number"
+            android:importantForAutofill="no" />
+        <Button
+            android:id="@+id/aplicarRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/aplicar_radio" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/preparar" />
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:hint="@string/nombre"
+            android:inputType="textCapWords"
+            android:maxLength="40"
+            android:importantForAutofill="no" />
+        <Button
+            android:id="@+id/registrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registrar" />
+        <TextView
+            android:id="@+id/aviso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="polite"
+            android:text="@string/como_jugar" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/coleccion"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/coleccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
