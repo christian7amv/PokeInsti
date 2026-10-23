@@ -197,6 +197,14 @@ public class MainActivity extends AppCompatActivity {
         reloj.post(actualizar);
     }
 
+    @Override protected void onPause() {
+        reloj.removeCallbacks(actualizar);
+        localizador.parar();
+        posicion = null;
+        nfc.parar();
+        super.onPause();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
