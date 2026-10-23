@@ -149,6 +149,42 @@ public class MainActivity extends AppCompatActivity {
         actualizarPista();
     }
 
+    private void actualizarPista() {
+        String cercana = "";
+        float menor = Float.MAX_VALUE;
+        try (Cursor etiquetas = baseDatos.pendientes()) {
+            if (etiquetas.getCount() == 0) {
+                estado.setText("No quedan etiquetas por encontrar. Registra alguna para empezar.");
+                etiquetaCaliente = "";
+                return;
+            }
+            if (!ubicacionUtil()) {
+                estado.setText("Buscando ubicación precisa... Comprueba el permiso y la ubicación del móvil.");
+                etiquetaCaliente = "";
+                return;
+            }
+            while (etiquetas.moveToNext()) {
+                float distancia = Localizador.distancia(posicion, etiquetas.getDouble(1), etiquetas.getDouble(2));
+                if (distancia < menor) {
+                    menor = distancia;
+                    cercana = etiquetas.getString(0);
+                }
+            }
+        }
+        estado.setText(menor <= radio ? "¡CALIENTE! Hay una etiqueta cerca." : "FRÍO. Sigue buscando.");
+        if (menor <= radio) {
+            if (!cercana.equals(etiquetaCaliente)) {
+                Vibrator vibrador = getSystemService(Vibrator.class);
+                if (vibrador != null && vibrador.hasVibrator()) {
+                    vibrador.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
+                }
+            }
+            etiquetaCaliente = cercana;
+        } else {
+            etiquetaCaliente = "";
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
