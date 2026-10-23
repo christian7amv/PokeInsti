@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">PokeInsti</string>
+    <string name="app_name">PokéInsti</string>
+    <string name="esperando">Pulsa Activar ubicación para empezar.</string>
+    <string name="activar_ubicacion">Activar ubicación</string>
+    <string name="radio">Radio en metros</string>
+    <string name="aplicar_radio">Aplicar radio</string>
+    <string name="preparar">Preparar una etiqueta: colócate donde quieras dejarla.</string>
+    <string name="nombre">Nombre del Pokémon</string>
+    <string name="registrar">Registrar etiqueta NFC aquí</string>
+    <string name="cancelar">Cancelar registro</string>
+    <string name="como_jugar">Para capturar, acerca el móvil a una etiqueta registrada.</string>
+    <string name="coleccion">Mi colección</string>
 </resources>
