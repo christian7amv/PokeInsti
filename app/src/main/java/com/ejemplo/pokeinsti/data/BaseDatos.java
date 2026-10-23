@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-// Dani: una sola tabla; cada etiqueta tiene un Pokémon y unas coordenadas.
 public class BaseDatos extends SQLiteOpenHelper {
     public BaseDatos(Context contexto) {
         super(contexto, "pokeinsti_simple.db", null, 1);

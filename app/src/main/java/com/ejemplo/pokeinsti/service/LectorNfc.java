@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.nfc.NfcAdapter;
 import java.util.function.Consumer;
 
-// Raquel: lee el identificador de la etiqueta, sin escribir nada en ella.
 public class LectorNfc {
     private final Activity actividad;
     private final NfcAdapter adaptador;

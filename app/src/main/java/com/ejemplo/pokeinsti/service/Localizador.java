@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import java.util.function.Consumer;
 
-// Christian: ubicación de Android y cálculo de distancia. No usa mapas.
 public class Localizador implements LocationListener {
     private final Context contexto;
     private final LocationManager gestor;
