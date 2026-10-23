@@ -189,6 +189,14 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
     }
 
+    @Override protected void onResume() {
+        super.onResume();
+        nfc.iniciar(this::leerEtiqueta);
+        if (!nfc.disponible()) aviso.setText("Activa NFC en un móvil compatible para leer etiquetas.");
+        if (localizador.tienePermiso()) localizador.iniciar();
+        reloj.post(actualizar);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
