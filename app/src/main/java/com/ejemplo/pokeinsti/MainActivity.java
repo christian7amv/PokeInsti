@@ -80,6 +80,17 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.activarUbicacion).setOnClickListener(vista -> pedirUbicacion());
     }
 
+    private void pedirUbicacion() {
+        if (!localizador.tienePermiso()) {
+            requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+        } else if (localizador.iniciar()) {
+            estado.setText("Esperando ubicación...");
+        } else {
+            estado.setText("Activa la ubicación del móvil y vuelve a pulsar el botón.");
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
