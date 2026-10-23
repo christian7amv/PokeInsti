@@ -118,6 +118,21 @@ public class MainActivity extends AppCompatActivity {
                 && posicion.hasAccuracy() && posicion.getAccuracy() <= radio;
     }
 
+    private void prepararRegistro() {
+        if (!nombrePendiente.isEmpty()) {
+            nombrePendiente = "";
+            registrar.setText(R.string.registrar);
+            aviso.setText("Registro cancelado. Puedes seguir buscando.");
+            return;
+        }
+        if (!nfc.disponible()) { mensaje("Necesitas NFC activado."); return; }
+        if (!ubicacionUtil()) { mensaje("Espera una ubicación reciente y precisa."); return; }
+        nombrePendiente = nombre.getText().toString().trim();
+        if (nombrePendiente.isEmpty()) { mensaje("Escribe el nombre del Pokémon."); return; }
+        registrar.setText(R.string.cancelar);
+        aviso.setText("Acerca la etiqueta al móvil en el lugar donde vas a colocarla.");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
