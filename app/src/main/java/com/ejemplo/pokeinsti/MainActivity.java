@@ -100,6 +100,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void cambiarRadio() {
+        try {
+            int nuevo = Integer.parseInt(campoRadio.getText().toString());
+            if (nuevo < 1 || nuevo > 500) throw new NumberFormatException();
+            radio = nuevo;
+            getPreferences(MODE_PRIVATE).edit().putInt("radio", radio).apply();
+            etiquetaCaliente = "";
+            actualizarPista();
+        } catch (NumberFormatException error) {
+            mensaje("Escribe un radio entre 1 y 500 metros.");
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
