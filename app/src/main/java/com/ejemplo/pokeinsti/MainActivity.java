@@ -92,6 +92,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onRequestPermissionsResult(int codigo, String[] permisos, int[] resultados) {
+        super.onRequestPermissionsResult(codigo, permisos, resultados);
+        if (codigo == 1) {
+            if (localizador.tienePermiso()) pedirUbicacion();
+            else estado.setText("Activa el permiso de ubicación precisa para jugar.");
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
