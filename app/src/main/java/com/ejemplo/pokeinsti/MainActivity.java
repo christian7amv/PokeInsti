@@ -72,6 +72,14 @@ public class MainActivity extends AppCompatActivity {
             actualizarPista();
         });
 
+        radio = getPreferences(MODE_PRIVATE).getInt("radio", 15);
+        campoRadio.setText(String.valueOf(radio));
+        coleccion.setText(baseDatos.coleccion());
+        registrar.setOnClickListener(vista -> prepararRegistro());
+        findViewById(R.id.aplicarRadio).setOnClickListener(vista -> cambiarRadio());
+        findViewById(R.id.activarUbicacion).setOnClickListener(vista -> pedirUbicacion());
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
