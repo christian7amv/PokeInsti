@@ -133,6 +133,22 @@ public class MainActivity extends AppCompatActivity {
         aviso.setText("Acerca la etiqueta al móvil en el lugar donde vas a colocarla.");
     }
 
+    private void leerEtiqueta(String id) {
+        if (!nombrePendiente.isEmpty()) {
+            if (!ubicacionUtil()) { mensaje("La ubicación no es precisa. Vuelve a intentarlo."); return; }
+            boolean guardada = baseDatos.guardar(id, nombrePendiente,
+                    posicion.getLatitude(), posicion.getLongitude());
+            aviso.setText(guardada ? "Etiqueta registrada. Ya puedes buscarla."
+                    : "Esta etiqueta ya estaba registrada.");
+            nombrePendiente = "";
+            registrar.setText(R.string.registrar);
+        } else {
+            aviso.setText(baseDatos.capturar(id));
+            coleccion.setText(baseDatos.coleccion());
+        }
+        actualizarPista();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
