@@ -59,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        estado = findViewById(R.id.estado);
+        coleccion = findViewById(R.id.coleccion);
+        aviso = findViewById(R.id.aviso);
+        nombre = findViewById(R.id.nombre);
+        campoRadio = findViewById(R.id.radio);
+        registrar = findViewById(R.id.registrar);
+        baseDatos = new BaseDatos(this);
+        nfc = new LectorNfc(this);
+        localizador = new Localizador(this, ubicacion -> {
+            posicion = ubicacion;
+            actualizarPista();
+        });
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
