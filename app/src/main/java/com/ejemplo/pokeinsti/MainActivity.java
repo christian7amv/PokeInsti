@@ -113,6 +113,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private boolean ubicacionUtil() {
+        return localizador.tienePermiso() && Localizador.esReciente(posicion)
+                && posicion.hasAccuracy() && posicion.getAccuracy() <= radio;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
