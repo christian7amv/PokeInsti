@@ -8,6 +8,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import android.Manifest;
+import android.database.Cursor;
+import android.location.Location;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import com.ejemplo.pokeinsti.data.BaseDatos;
+import com.ejemplo.pokeinsti.service.LectorNfc;
+import com.ejemplo.pokeinsti.service.Localizador;
+
 
 public class MainActivity extends AppCompatActivity {
 
