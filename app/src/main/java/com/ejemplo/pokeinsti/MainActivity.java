@@ -185,6 +185,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void mensaje(String texto) {
+        Toast.makeText(this, texto, Toast.LENGTH_LONG).show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
