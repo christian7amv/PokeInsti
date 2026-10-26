@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (vista, insets) -> {
             Insets barras = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             vista.setPadding(barras.left, barras.top, barras.right, barras.bottom);
-            return insets;
+            return insets;//a
         });
 
         estado = findViewById(R.id.estado);
